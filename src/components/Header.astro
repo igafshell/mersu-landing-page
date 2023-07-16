@@ -1,21 +1,62 @@
 ---
 ---
 
-<header class="flex justify-between lg:px-16 2xl:px-20">
-	<div class="text-xl lg:text-3xl 2xl:text-5xl">Mersu</div>
-	<ul class="text-lg lg:text-2xl 2xl:text-4xl">
-		<li>Watches</li>
-		<li>Engagement & Wedding</li>
-		<li>Jewellery</li>
-	</ul>
+<header
+	class="flex justify-between items-center px-14 lg:px-20 2xl:px-28 py-4 lg:py-6 bg-indigo-950"
+>
+	<div class="max-sm:text-xl text-3xl lg:text-4xl 2xl:text-5xl">Mersu</div>
+	<nav class="text-lg lg:text-xl 2xl:text-2xl flex">
+		<button class="tham tham-e-slider tham-w-6 md:hidden">
+			<div class="tham-box">
+				<div class="tham-inner bg-white"></div>
+			</div>
+		</button>
+		<div
+			class="links max-md:absolute max-md:top-14 max-md:right-0 max-md:pl-4 max-sm:pr-16 max-md:pr-28 max-md:py-6 bg-indigo-950 gap-8 hide md:flex text-blue-50"
+		>
+			<a href="/" class="hover:text-white w-min">Watches</a>
+			<a href="/" class="hover:text-white">Engagement & Wedding</a>
+			<a href="/" class="hover:text-white w-min">Jewellery</a>
+		</div>
+	</nav>
+	<script>
+		const tham = document.querySelector(".tham");
+		const links = document.querySelector(".links");
+
+		tham.addEventListener("click", () => {
+			tham.classList.toggle("tham-active");
+			links.classList.toggle("hide");
+			links.classList.toggle("show");
+		});
+	</script>
 </header>
 
-<style>
+<style lang="scss">
 	div {
 		font-family: var(--nav-font);
 	}
 
-	ul {
+	nav {
 		font-family: var(--nav-font);
+	}
+
+	a {
+		text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+
+		&::after {
+			@apply content-[''] border-b-2 border-b-blue-500 scale-x-0 hover:scale-x-100 origin-center block bg-blue-500 motion-safe:transition-all;
+		}
+	}
+	.hide {
+		@media only screen and (max-width: 764px) {
+			display: none;
+		}
+	}
+
+	.show {
+		display: flex;
+		@media only screen and (max-width: 764px) {
+			flex-direction: column;
+		}
 	}
 </style>

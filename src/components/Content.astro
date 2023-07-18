@@ -1,5 +1,16 @@
 ---
-let imgPath = "/assets/dream-bracelet.png";
+import { Image } from "astro:assets";
+import arrow_backwards from "../assets/arrow_backwards_white.png";
+import arrow_forward from "../assets/arrow_forward_white.png";
+import bracelet_hero from "../assets/dream-bracelet.png";
+import necklace_hero from "../assets/emerald-necklace.png";
+import watch_hero from "../assets/diamond-watch.png";
+import diamond_hero from "../assets/diamond.png";
+import shipping_icon from "../assets/shipping-i.png";
+import service_icon from "../assets/service-i.png";
+import appointment_icon from "../assets/appointment-i.png";
+import box_icon from "../assets/box-i.png";
+import arrow_a from "../assets/arrow-a.png";
 ---
 
 <main>
@@ -7,12 +18,12 @@ let imgPath = "/assets/dream-bracelet.png";
 		class="flex flex-col max-md:text-center max-md:items-center items-start md:pl-28 lg:pl-32 2xl:pl-48 max-sm:pt-8 pt-12 2xl:pt-18 max-md:pb-80 pb-16 lg:pb-20 2xl:pb-32"
 	>
 		<h1
-			class="max-sm:text-4xl text-5xl lg:text-7xl 2xl:text-8xl mb-6 lg:mb-8 2xl:mb-12 w-4/5 xl:w-2/3"
+			class="max-sm:text-4xl text-5xl lg:text-7xl 2xl:text-8xl mb-6 lg:mb-8 2xl:mb-12 w-4/5 xl:w-2/3 fade-up"
 		>
 			Exceptional jewellery for brilliant moments
 		</h1>
 		<p
-			class="max-sm:text-lg text-xl lg:text-xl 2xl:text-2xl w-3/5 lg:w-2/5 mb-24 lg:mb-[7.5rem] 2xl:mb-56 text-slate-200"
+			class="max-sm:text-lg text-xl lg:text-xl 2xl:text-2xl w-3/5 lg:w-2/5 mb-24 lg:mb-[7.5rem] 2xl:mb-56 text-slate-200 fade-up"
 		>
 			We sell elegant wedding rings and jewellery crafted with care and
 			precision for the most precious moments.
@@ -23,66 +34,198 @@ let imgPath = "/assets/dream-bracelet.png";
 			>Discover the creations</a
 		>
 	</section>
-	<section
-		class="bg-blue-200 py-14 lg:py-18 2xl:py-24 justify-items-center transition-all"
-	>
-		<button class="back"
-			><img
-				src="/assets/arrow_backwards.png"
-				alt="An image of an arrow, if you click it will cycle the products backwards"
-			/></button
-		>
-
-		<img
-			src={imgPath}
-			alt=""
-			class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all"
-		/>
+	<section>
 		<div
-			class="flex flex-col items-start md:px-[2rem] lg:px-[3rem] 2xl:px-[5rem] max-md:text-center max-md:items-center justify-center"
+			class="bg-blue-950 py-14 lg:py-18 2xl:py-24 justify-items-center transition-all max-w-[100vw]"
 		>
-			<h1
-				class="max-sm:text-4xl text-5xl lg:text-6xl 2xl:text-7xl max-sm:mb-4 max-md:mb-6 mb-4 lg:mb-6 2xl:mb-8 text-[#000306]"
+			<a class="back" href="/"
+				><Image
+					src={arrow_backwards}
+					alt="An image of an arrow, if you click it will cycle the products backwards"
+				/></a
 			>
-				Dextera Bracelet
-			</h1>
-			<p
-				class="max-sm:text-base text-lg lg:text-xl 2xl:text-2xl max-sm:mb-10 mb-16 lg:mb-[6rem] 2xl:mb-[10rem] text-[#000f1e]"
+			<Image
+				src={bracelet_hero}
+				alt=""
+				class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
+			/>
+			<div
+				class="flex flex-col items-start md:px-[2rem] lg:px-[3rem] 2xl:px-[5rem] max-md:text-center max-md:items-center justify-center fade-up"
 			>
-				Intricate details meet bold construction in this modern bracelet from
-				the Dextera family. Enhanced with our celebrated pavé technique, it a
-				gold-tone plated setting.
-			</p>
-			<a
-				href="/dextera-bracelet/"
-				class="py-3 lg:py-4 2xl:py-6 px-6 lg:px-10 2xl:px-14 bg-white text-black text-xl lg:text-2xl 2xl:text-3xl max-md:mb-16 max-sm:mb-10 hover:bg-blue-400 motion-safe:transition-all"
-				>Shop Now</a
+				<h1
+					class="max-sm:text-4xl text-5xl lg:text-6xl 2xl:text-7xl max-sm:mb-4 max-md:mb-6 mb-4 lg:mb-6 2xl:mb-8 text-white"
+				>
+					Dextera Bracelet
+				</h1>
+				<p
+					class="max-sm:text-base text-lg lg:text-xl 2xl:text-2xl max-sm:mb-10 mb-16 lg:mb-[6rem] 2xl:mb-[10rem] text-slate-200"
+				>
+					Intricate details meet bold construction in this modern bracelet from
+					the Dextera family. Enhanced with our celebrated pavé technique, it a
+					gold-tone plated setting.
+				</p>
+				<a
+					href="/dextera-bracelet/"
+					class="py-3 lg:py-4 2xl:py-6 px-6 lg:px-10 2xl:px-14 bg-white text-black text-xl lg:text-2xl 2xl:text-3xl max-md:mb-16 max-sm:mb-10 hover:bg-blue-400 motion-safe:transition-all"
+					>Shop Now</a
+				>
+			</div>
+			<a class="forward" href="/"
+				><Image
+					src={arrow_forward}
+					alt="An image of an arrow, if you click it will cycle the products forwards."
+				/></a
 			>
 		</div>
-		<button class="forward"
-			><img
-				src="/assets/arrow_forward.png"
-				alt="An image of an arrow, if you click it will cycle the products forwards."
-			/></button
+		<div
+			class="bg-slate-800 py-14 lg:py-18 2xl:py-24 justify-items-center transition-all max-w-[100vw]"
 		>
+			<a href="/" class="back"
+				><Image
+					src={arrow_backwards}
+					alt="An image of an arrow, if you click it will cycle the products backwards"
+				/></a
+			>
+			<Image
+				src={necklace_hero}
+				alt=""
+				class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
+			/>
+			<div
+				class="flex flex-col items-start md:px-[2rem] lg:px-[3rem] 2xl:px-[5rem] max-md:text-center max-md:items-center justify-center fade-up"
+			>
+				<h1
+					class="max-sm:text-4xl text-5xl lg:text-6xl 2xl:text-7xl max-sm:mb-4 max-md:mb-6 mb-4 lg:mb-6 2xl:mb-8 text-white"
+				>
+					Millenia Necklace
+				</h1>
+				<p
+					class="max-sm:text-base text-lg lg:text-xl 2xl:text-2xl max-sm:mb-10 mb-16 lg:mb-[6rem] 2xl:mb-[10rem] text-slate-200"
+				>
+					Known for its dancing stone design, this mesmerizing Millenia necklace
+					suspends a green octagon-cut stone within a frame of pavé-set rose
+					gold-tone plating.
+				</p>
+				<a
+					href="/millenia-necklace/"
+					class="py-3 lg:py-4 2xl:py-6 px-6 lg:px-10 2xl:px-14 bg-white text-black text-xl lg:text-2xl 2xl:text-3xl max-md:mb-16 max-sm:mb-10 hover:bg-blue-400 motion-safe:transition-all"
+					>Shop Now</a
+				>
+			</div>
+			<a class="forward" href="/"
+				><Image
+					src={arrow_forward}
+					alt="An image of an arrow, if you click it will cycle the products forwards."
+				/></a
+			>
+		</div>
+		<div
+			class="bg-[#001F3D] py-14 lg:py-18 2xl:py-24 justify-items-center transition-all"
+		>
+			<a class="back" href="/"
+				><Image
+					src={arrow_backwards}
+					alt="An image of an arrow, if you click it will cycle the products backwards"
+				/></a
+			>
+			<Image
+				src={watch_hero}
+				alt=""
+				class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
+			/>
+			<div
+				class="flex flex-col items-start md:px-[2rem] lg:px-[3rem] 2xl:px-[5rem] max-md:text-center max-md:items-center justify-center fade-up"
+			>
+				<h1
+					class="max-sm:text-4xl text-5xl lg:text-6xl 2xl:text-7xl max-sm:mb-4 max-md:mb-6 mb-4 lg:mb-6 2xl:mb-8 text-white"
+				>
+					Cosmopolitan Watch
+				</h1>
+				<p
+					class="max-sm:text-base text-lg lg:text-xl 2xl:text-2xl max-sm:mb-10 mb-16 lg:mb-[6rem] 2xl:mb-[10rem] text-slate-200"
+				>
+					The modern and luxurious, black crystal bezel, exclusive to the line,
+					and chic, three-link metal bracelet complete an extraordinary design,
+					full of artistry and craftsmanship.
+				</p>
+				<a
+					href="/dextera-bracelet/"
+					class="py-3 lg:py-4 2xl:py-6 px-6 lg:px-10 2xl:px-14 bg-white text-black text-xl lg:text-2xl 2xl:text-3xl max-md:mb-16 max-sm:mb-10 hover:bg-blue-400 motion-safe:transition-all"
+					>Shop Now</a
+				>
+			</div>
+			<a class="forward" href="/"
+				><Image
+					src={arrow_forward}
+					alt="An image of an arrow, if you click it will cycle the products forwards."
+				/></a
+			>
+		</div>
+		<div
+			class="bg-blue-950 py-14 lg:py-18 2xl:py-24 justify-items-center transition-all"
+		>
+			<button class="back"
+				><Image
+					src={arrow_backwards}
+					alt="An image of an arrow, if you click it will cycle the products backwards"
+				/></button
+			>
+			<Image
+				src={bracelet_hero}
+				alt=""
+				class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
+			/>
+			<div
+				class="flex flex-col items-start md:px-[2rem] lg:px-[3rem] 2xl:px-[5rem] max-md:text-center max-md:items-center justify-center fade-up"
+			>
+				<h1
+					class="max-sm:text-4xl text-5xl lg:text-6xl 2xl:text-7xl max-sm:mb-4 max-md:mb-6 mb-4 lg:mb-6 2xl:mb-8 text-white"
+				>
+					Dextera Bracelet
+				</h1>
+				<p
+					class="max-sm:text-base text-lg lg:text-xl 2xl:text-2xl max-sm:mb-10 mb-16 lg:mb-[6rem] 2xl:mb-[10rem] text-slate-200"
+				>
+					Intricate details meet bold construction in this modern bracelet from
+					the Dextera family. Enhanced with our celebrated pavé technique, it a
+					gold-tone plated setting.
+				</p>
+				<a
+					href="/dextera-bracelet/"
+					class="py-3 lg:py-4 2xl:py-6 px-6 lg:px-10 2xl:px-14 bg-white text-black text-xl lg:text-2xl 2xl:text-3xl max-md:mb-16 max-sm:mb-10 hover:bg-blue-400 motion-safe:transition-all"
+					>Shop Now</a
+				>
+			</div>
+			<button class="forward"
+				><Image
+					src={arrow_forward}
+					alt="An image of an arrow, if you click it will cycle the products forwards."
+				/></button
+			>
+		</div>
 	</section>
 	<section
-		class="max-sm:pb-[22rem] max-md:pb-[25rem] max-sm:pt-12 max-md:pt-20 md:py-[7rem] lg:py-[10rem] 2xl:py-[15rem] flex md:justify-end max-md:justify-center"
+		class="flex max-lg:justify-center max-lg:flex-col-reverse lg:gap-20 xl:gap-28 2xl:gap-32"
 	>
-		<div class="md:mr-[20vw]">
+		<Image
+			src={diamond_hero}
+			alt="an image of a diamond"
+			class="diamond w-[45%]"
+		/>
+		<div class="flex flex-col items-center justify-center max-lg:my-12 fade-up">
 			<h1 class="text-4xl lg:text-5xl 2xl:text-6xl pb-4 2xl:pb-6 text-center">
 				From the Source
 			</h1>
 			<p
-				class="max-md:text-center max-sm:max-w-[17rem] max-w-[25rem] lg:max-w-[30rem] 2xl:max-w-[40rem] text-lg lg:text-xl 2xl:text-2xl max-sm:mb-16 mb-20 lg:mb-24 2xl:mb-40"
+				class="max-lg:text-center max-sm:max-w-[17rem] max-w-[25rem] lg:max-w-[30rem] 2xl:max-w-[40rem] text-lg lg:text-xl 2xl:text-2xl max-sm:mb-16 mb-20 lg:mb-24 2xl:mb-40"
 			>
 				Handcrafting the world's best diamonds starts with knowing where they
 				come from. We proudly trace 100% of our rough diamonds to known mines
 				ans sources.
 			</p>
 			<a href="/" class="text-lg lg:text-xl 2xl:text-2xl inline-block"
-				>Follow Your Diamond's Journey <img
-					src="/assets/arrow-a.svg"
+				>Follow Your Diamond's Journey <Image
+					src={arrow_a}
 					class="inline"
 					alt=""
 				/></a
@@ -90,23 +233,55 @@ let imgPath = "/assets/dream-bracelet.png";
 		</div>
 	</section>
 	<section
-		class="flex max-md:justify-center max-md:text-center md:pl-20 lg:pl-24 2xl:pl-32 max-md:pt-12 pt-8 lg:pt-10 2xl:pt-14 pb-[60vh]"
+		class="flex max-md:justify-center max-md:text-center md:pl-20 lg:pl-24 2xl:pl-32 max-md:pt-12 pt-8 lg:pt-10 2xl:pt-14 max-md:pb-[60vh] md:pb-[60vh]"
 	>
-		<div>
-			<h1 class="text-4xl lg:text-5xl 2xl:text-6xl mb-3 2xl:mb-4">
+		<div class="max-md:items-center max-md:flex max-md:flex-col fade-up">
+			<h1
+				class="max-sm:text-5xl max-md:text-6xl text-5xl 2xl:text-6xl mb-3 2xl:mb-4"
+			>
 				Love your way
 			</h1>
 			<p
-				class="text-base md:text-xl 2xl:text-2xl max-w-[15rem] lg:max-w-[20rem] 2xl:max-w-[25rem] mb-12 lg:mb-16 2xl:mb-20"
+				class="max-sm:text-lg text-xl 2xl:text-2xl max-w-[15rem] lg:max-w-[20rem] 2xl:max-w-[25rem] max-sm:mb-14 max-md:mb-16 mb-12 lg:mb-16 2xl:mb-20"
 			>
 				You'll know who it's for. You'll know when it's time. You'll just know.
 			</p>
-			<a href="/" class="text-base md:text-xl 2xl:text-2xl inline-block"
-				>Explore Love & Engagement<img
-					src="/assets/arrow-a.svg"
+			<a href="/" class="max-sm:text-lg text-xl 2xl:text-2xl inline-block"
+				>Explore Love & Engagement<Image
+					src={arrow_a}
 					alt=""
 					class="inline"
 				/></a
+			>
+		</div>
+	</section>
+	<section
+		class="text-center grid max-sm:grid-cols-1 justify-items-center grid-cols-2 xl:grid-cols-4 max-sm:gap-y-14 gap-y-16 gap-x-6 md:gap-x-8 lg:gap-x-10 2xl:gap-x-14 bg-[#001F3D] max-sm:py-8 py-10 lg:py-14 2xl:py-20 max-sm:px-6 px-8 lg:px-10 2xl:px-14"
+	>
+		<div class="fade-up">
+			<Image src={shipping_icon} alt="" class="logo" />
+			<h3>Complimentary Shipping & Returns</h3>
+			<p>We offer complimentary shipping and returns on all Mersu orders.</p>
+			<a href="/">Learn More <Image src={arrow_a} alt="" class="inline" /></a>
+		</div>
+		<div class="fade-up delay-200">
+			<Image src={service_icon} alt="" class="logo" />
+			<h3>Mersu at your service</h3>
+			<p>Our Client Advisors are always here to help.</p>
+			<a href="/">Contact Us<Image src={arrow_a} alt="" class="inline" /></a>
+		</div>
+		<div class="fade-up delay-500">
+			<Image src={appointment_icon} alt="" class="logo" />
+			<h3>Book an Appointment</h3>
+			<p>We're happy to help with in-store or virtual appointments.</p>
+			<a href="/">Book Now<Image src={arrow_a} alt="" class="inline" /></a>
+		</div>
+		<div class="fade-up delay-700">
+			<Image src={box_icon} alt="" class="logo" />
+			<h3>The Iconic Blue Box</h3>
+			<p>Your Mersu purchase comes wrapped in our Blue Box packaging.</p>
+			<a href="/"
+				>Explore All Gifts<Image src={arrow_a} alt="" class="inline" /></a
 			>
 		</div>
 	</section>
@@ -119,15 +294,15 @@ let imgPath = "/assets/dream-bracelet.png";
 		text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 	}
 	section:nth-of-type(1) {
-		background-image: url("/assets/ring-img-desktop.png"),
-			url("/assets/bg1.png");
+		background-image: url("../assets/ring-img-desktop.png"),
+			url("../assets/bg1.png");
 		background-size: auto 100%, auto 100%;
 		background-position: top right, left top;
 		background-repeat: no-repeat;
 
 		@media only screen and (max-width: 765px) {
-			background-image: url("/assets/ring-img-mobile.png"),
-				url("/assets/bg1.png");
+			background-image: url("../assets/ring-img-mobile.png"),
+				url("../assets/bg1.png");
 			background-position: bottom center, top left;
 			background-size: 100% auto, auto 100%;
 		}
@@ -171,32 +346,37 @@ let imgPath = "/assets/dream-bracelet.png";
 	}
 
 	section:nth-of-type(3) {
-		background-image: url("/assets/diamond.png"), url("/assets/bg2.png");
-		background-size: auto 100%, 100% auto;
+		background-image: url("../assets/bg2.png");
+		background-size: cover;
 		background-repeat: no-repeat;
 
+		@media only screen and (max-width: 1023px) {
+			.diamond {
+				content: url("../assets/diamond-lg.png");
+				@apply w-full;
+			}
+		}
+
+		@media only screen and (max-width: 600px) {
+			.diamond {
+				content: url("../assets/diamond-mobile.png");
+			}
+		}
 		a {
 			font-family: var(--p-font);
 			&::after {
 				@apply content-[''] border-b-2 border-b-blue-500 scale-x-0 hover:scale-x-100 origin-center block  motion-safe:transition-all;
 			}
 		}
-		@media only screen and (max-width: 765px) {
-			background-image: url("/assets/diamond-mobile.png"),
-				url("/assets/bg2.png");
-			background-position: center bottom, top left;
-			background-size: 100% auto, auto 100%;
-		}
 	}
 
 	section:nth-of-type(4) {
-		background-image: url("/assets/bg3.png");
+		background-image: url("../assets/bg3.png");
 		background-position: top center;
-		background-size: 100% auto;
+		background-size: cover;
 		background-repeat: no-repeat;
 		@media only screen and (max-width: 765px) {
-			background-image: url("/assets/bg3-mobile.png");
-			background-size: auto 100%;
+			background-image: url("../assets/bg3-mobile.png");
 		}
 		a {
 			font-family: var(--p-font);
@@ -205,88 +385,64 @@ let imgPath = "/assets/dream-bracelet.png";
 			}
 		}
 	}
+
+	section:nth-of-type(5) {
+		div {
+			@apply flex items-center flex-col max-lg:w-2/3;
+			.logo {
+				@apply w-[3rem] md:w-[5rem] max-sm:mb-3 mb-4 lg:mb-6;
+			}
+
+			h3 {
+				@apply text-2xl lg:text-3xl mb-3;
+			}
+
+			p {
+				@apply text-slate-300 text-lg lg:text-xl max-sm:mb-4 mb-6 lg:mb-10;
+			}
+			a {
+				@apply inline-block text-xl;
+				&::after {
+					@apply content-[''] border-b-2 border-b-blue-500 scale-x-0 hover:scale-x-100 origin-center block  motion-safe:transition-all;
+				}
+
+				img {
+					@apply w-5;
+				}
+			}
+		}
+	}
+
+	.fade-up {
+		opacity: 0;
+		filter: blur(3px);
+		transform: translateY(100px);
+		@media (prefers-reduced-motion: no-preference) {
+			transition: all 0.5s ease-out;
+		}
+	}
+
+	.fade-show {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateY(0);
+		transform: translateX(0);
+	}
 </style>
 <script defer>
-	const slides = [
-		{
-			p: "Intricate details meet bold construction in this modern bracelet from the Dextera family. Enhanced with our celebrated pavé technique, it a gold-tone plated setting.",
-			h1: "Dextera Bracelet",
-			img: "/assets/dream-bracelet.png",
-			a: "/dextera-bracelet/",
-			bg: "rgb(191, 219, 254)",
-			p_color: "#000f1e",
-			h1_color: "#000306",
-			arrow_back: "/assets/arrow_backwards.png",
-			arrow_forward: "/assets/arrow_forward.png",
-		},
-		{
-			p: " Known for its dancing stone design, this mesmerizing Millenia necklace suspends a green octagon-cut stone within a frame of pavé-set rose gold-tone plating.",
-			h1: "Millenia Necklace",
-			img: "/assets/emerald-necklace.png",
-			a: "/millenia-necklace/",
-			bg: "#FFE5B4",
-			p_color: "#000f1e",
-			h1_color: "#000306",
-			arrow_back: "/assets/arrow_backwards.png",
-			arrow_forward: "/assets/arrow_forward.png",
-		},
-		{
-			p: "The modern and luxurious, black crystal bezel, exclusive to the line, and chic, three-link metal bracelet complete an extraordinary design, full of artistry and craftsmanship.",
-			h1: "Cosmopolitan Watch",
-			img: "/assets/diamond-watch.png",
-			a: "/cosmopolitan-watch",
-			bg: "#001F3D",
-			p_color: "whitesmoke",
-			h1_color: "#FFFFFF",
-			arrow_back: "/assets/arrow_backwards_white.png",
-			arrow_forward: "/assets/arrow_forward_white.png",
-		},
-	];
-	const p = document.querySelector("section:nth-of-type(2) p");
-	const h1 = document.querySelector("section:nth-of-type(2) h1");
-	const img = document.querySelector(".hero-img");
-	const a = document.querySelector("section:nth-of-type(2) a");
-	const section = document.querySelector("section:nth-of-type(2)");
-	const arrow_back = document.querySelector("section:nth-of-type(2) .back img");
-	const arrow_forward = document.querySelector(
-		"section:nth-of-type(2) .forward img"
-	);
-
-	const back = document.querySelector("section:nth-of-type(2) .back");
-	const forward = document.querySelector("section:nth-of-type(2) .forward");
-	let position = 0;
-
-	back.addEventListener("click", () => {
-		if (position > 0) {
-			position--;
-		} else {
-			position = 2;
-		}
-		p.textContent = slides[position].p;
-		p.style.color = slides[position].p_color;
-		h1.textContent = slides[position].h1;
-		h1.style.color = slides[position].h1_color;
-		a.href = slides[position].a;
-		section.style.backgroundColor = slides[position].bg;
-		img.src = slides[position].img;
-		arrow_back.src = slides[position].arrow_back;
-		arrow_forward.src = slides[position].arrow_forward;
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("fade-show");
+			} else {
+				entry.target.classList.remove("fade-show");
+			}
+		});
 	});
 
-	forward.addEventListener("click", () => {
-		if (position < 2) {
-			position++;
-		} else {
-			position = 0;
-		}
-		p.textContent = slides[position].p;
-		p.style.color = slides[position].p_color;
-		h1.textContent = slides[position].h1;
-		h1.style.color = slides[position].h1_color;
-		a.href = slides[position].a;
-		section.style.backgroundColor = slides[position].bg;
-		img.src = slides[position].img;
-		arrow_back.src = slides[position].arrow_back;
-		arrow_forward.src = slides[position].arrow_forward;
+	const fade_up = document.querySelectorAll(".fade-up");
+
+	fade_up.forEach((elm1) => {
+		observer.observe(elm1);
 	});
 </script>

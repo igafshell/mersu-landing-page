@@ -1,7 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import arrow_backwards from "../assets/arrow_backwards_white.png";
-import arrow_forward from "../assets/arrow_forward_white.png";
 import bracelet_hero from "../assets/dream-bracelet.png";
 import necklace_hero from "../assets/emerald-necklace.png";
 import watch_hero from "../assets/diamond-watch.png";
@@ -34,176 +32,110 @@ import arrow_a from "../assets/arrow-a.png";
 			>Discover the creations</a
 		>
 	</section>
-	<section>
+	<section class="relative">
 		<div
-			class="bg-blue-950 py-14 lg:py-18 2xl:py-24 justify-items-center transition-all max-w-[100vw]"
+			class="flex overflow-x-auto overflow-y-hidden scroll-smooth snap-mandatory snap-x"
 		>
-			<a class="back" href="/"
-				><Image
-					src={arrow_backwards}
-					alt="An image of an arrow, if you click it will cycle the products backwards"
-				/></a
-			>
-			<Image
-				src={bracelet_hero}
-				alt=""
-				class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
-			/>
-			<div
-				class="flex flex-col items-start md:px-[2rem] lg:px-[3rem] 2xl:px-[5rem] max-md:text-center max-md:items-center justify-center fade-up"
-			>
-				<h1
-					class="max-sm:text-4xl text-5xl lg:text-6xl 2xl:text-7xl max-sm:mb-4 max-md:mb-6 mb-4 lg:mb-6 2xl:mb-8 text-white"
+			<div class="bg-blue-950 prod-container" id="product1">
+				<Image
+					src={bracelet_hero}
+					alt=""
+					class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
+				/>
+				<div
+					class="flex flex-col items-start md:px-[2rem] lg:px-[3rem] 2xl:px-[5rem] max-md:text-center max-md:items-center justify-center fade-up"
 				>
-					Dextera Bracelet
-				</h1>
-				<p
-					class="max-sm:text-base text-lg lg:text-xl 2xl:text-2xl max-sm:mb-10 mb-16 lg:mb-[6rem] 2xl:mb-[10rem] text-slate-200"
-				>
-					Intricate details meet bold construction in this modern bracelet from
-					the Dextera family. Enhanced with our celebrated pavé technique, it a
-					gold-tone plated setting.
-				</p>
-				<a
-					href="/dextera-bracelet/"
-					class="py-3 lg:py-4 2xl:py-6 px-6 lg:px-10 2xl:px-14 bg-white text-black text-xl lg:text-2xl 2xl:text-3xl max-md:mb-16 max-sm:mb-10 hover:bg-blue-400 motion-safe:transition-all"
-					>Shop Now</a
-				>
+					<h1
+						class="max-sm:text-4xl text-5xl lg:text-6xl 2xl:text-7xl max-sm:mb-4 max-md:mb-6 mb-4 lg:mb-6 2xl:mb-8 text-white"
+					>
+						Dextera Bracelet
+					</h1>
+					<p
+						class="max-sm:text-base text-lg lg:text-xl 2xl:text-2xl max-sm:mb-10 mb-16 lg:mb-[6rem] 2xl:mb-[10rem] text-slate-200"
+					>
+						Intricate details meet bold construction in this modern bracelet
+						from the Dextera family. Enhanced with our celebrated pavé
+						technique, it a gold-tone plated setting.
+					</p>
+					<a
+						href="/dextera-bracelet/"
+						class="py-3 lg:py-4 2xl:py-6 px-6 lg:px-10 2xl:px-14 bg-white text-black text-xl lg:text-2xl 2xl:text-3xl max-md:mb-16 max-sm:mb-10 hover:bg-blue-400 motion-safe:transition-all"
+						>Shop Now</a
+					>
+				</div>
 			</div>
-			<a class="forward" href="/"
-				><Image
-					src={arrow_forward}
-					alt="An image of an arrow, if you click it will cycle the products forwards."
-				/></a
-			>
+			<div class="bg-slate-800 prod-container" id="product2">
+				<Image
+					src={necklace_hero}
+					alt="A beautiful image of the millenia necklace"
+					class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
+				/>
+				<div
+					class="flex flex-col items-start md:px-[2rem] lg:px-[3rem] 2xl:px-[5rem] max-md:text-center max-md:items-center justify-center fade-up"
+				>
+					<h1
+						class="max-sm:text-4xl text-5xl lg:text-6xl 2xl:text-7xl max-sm:mb-4 max-md:mb-6 mb-4 lg:mb-6 2xl:mb-8 text-white"
+					>
+						Millenia Necklace
+					</h1>
+					<p
+						class="max-sm:text-base text-lg lg:text-xl 2xl:text-2xl max-sm:mb-10 mb-16 lg:mb-[6rem] 2xl:mb-[10rem] text-slate-200"
+					>
+						Known for its dancing stone design, this mesmerizing Millenia
+						necklace suspends a green octagon-cut stone within a frame of
+						pavé-set rose gold-tone plating.
+					</p>
+					<a
+						href="/millenia-necklace/"
+						class="py-3 lg:py-4 2xl:py-6 px-6 lg:px-10 2xl:px-14 bg-white text-black text-xl lg:text-2xl 2xl:text-3xl max-md:mb-16 max-sm:mb-10 hover:bg-blue-400 motion-safe:transition-all"
+						>Shop Now</a
+					>
+				</div>
+			</div>
+			<div class="bg-[#001F3D] prod-container" id="product3">
+				<Image
+					src={watch_hero}
+					alt="A beutiful image of the cosmopolitan watch"
+					class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
+				/>
+				<div
+					class="flex flex-col items-start md:px-[2rem] lg:px-[3rem] 2xl:px-[5rem] max-md:text-center max-md:items-center justify-center fade-up"
+				>
+					<h1
+						class="max-sm:text-4xl text-5xl lg:text-6xl 2xl:text-7xl max-sm:mb-4 max-md:mb-6 mb-4 lg:mb-6 2xl:mb-8 text-white"
+					>
+						Cosmopolitan Watch
+					</h1>
+					<p
+						class="max-sm:text-base text-lg lg:text-xl 2xl:text-2xl max-sm:mb-10 mb-16 lg:mb-[6rem] 2xl:mb-[10rem] text-slate-200"
+					>
+						The modern and luxurious, black crystal bezel, exclusive to the
+						line, and chic, three-link metal bracelet complete an extraordinary
+						design, full of artistry and craftsmanship.
+					</p>
+					<a
+						href="/dextera-bracelet/"
+						class="py-3 lg:py-4 2xl:py-6 px-6 lg:px-10 2xl:px-14 bg-white text-black text-xl lg:text-2xl 2xl:text-3xl max-md:mb-16 max-sm:mb-10 hover:bg-blue-400 motion-safe:transition-all"
+						>Shop Now</a
+					>
+				</div>
+			</div>
 		</div>
-		<div
-			class="bg-slate-800 py-14 lg:py-18 2xl:py-24 justify-items-center transition-all max-w-[100vw]"
-		>
-			<a href="/" class="back"
-				><Image
-					src={arrow_backwards}
-					alt="An image of an arrow, if you click it will cycle the products backwards"
-				/></a
+		<div class="slider-nav">
+			<a href="#product1"
+				><span class="sr-only">The first product, the dextera bracelet</span></a
 			>
-			<Image
-				src={necklace_hero}
-				alt=""
-				class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
-			/>
-			<div
-				class="flex flex-col items-start md:px-[2rem] lg:px-[3rem] 2xl:px-[5rem] max-md:text-center max-md:items-center justify-center fade-up"
+			<a href="#product2"
+				><span class="sr-only">The second product, the millenuium necklace</span
+				></a
 			>
-				<h1
-					class="max-sm:text-4xl text-5xl lg:text-6xl 2xl:text-7xl max-sm:mb-4 max-md:mb-6 mb-4 lg:mb-6 2xl:mb-8 text-white"
-				>
-					Millenia Necklace
-				</h1>
-				<p
-					class="max-sm:text-base text-lg lg:text-xl 2xl:text-2xl max-sm:mb-10 mb-16 lg:mb-[6rem] 2xl:mb-[10rem] text-slate-200"
-				>
-					Known for its dancing stone design, this mesmerizing Millenia necklace
-					suspends a green octagon-cut stone within a frame of pavé-set rose
-					gold-tone plating.
-				</p>
-				<a
-					href="/millenia-necklace/"
-					class="py-3 lg:py-4 2xl:py-6 px-6 lg:px-10 2xl:px-14 bg-white text-black text-xl lg:text-2xl 2xl:text-3xl max-md:mb-16 max-sm:mb-10 hover:bg-blue-400 motion-safe:transition-all"
-					>Shop Now</a
-				>
-			</div>
-			<a class="forward" href="/"
-				><Image
-					src={arrow_forward}
-					alt="An image of an arrow, if you click it will cycle the products forwards."
-				/></a
-			>
-		</div>
-		<div
-			class="bg-[#001F3D] py-14 lg:py-18 2xl:py-24 justify-items-center transition-all"
-		>
-			<a class="back" href="/"
-				><Image
-					src={arrow_backwards}
-					alt="An image of an arrow, if you click it will cycle the products backwards"
-				/></a
-			>
-			<Image
-				src={watch_hero}
-				alt=""
-				class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
-			/>
-			<div
-				class="flex flex-col items-start md:px-[2rem] lg:px-[3rem] 2xl:px-[5rem] max-md:text-center max-md:items-center justify-center fade-up"
-			>
-				<h1
-					class="max-sm:text-4xl text-5xl lg:text-6xl 2xl:text-7xl max-sm:mb-4 max-md:mb-6 mb-4 lg:mb-6 2xl:mb-8 text-white"
-				>
-					Cosmopolitan Watch
-				</h1>
-				<p
-					class="max-sm:text-base text-lg lg:text-xl 2xl:text-2xl max-sm:mb-10 mb-16 lg:mb-[6rem] 2xl:mb-[10rem] text-slate-200"
-				>
-					The modern and luxurious, black crystal bezel, exclusive to the line,
-					and chic, three-link metal bracelet complete an extraordinary design,
-					full of artistry and craftsmanship.
-				</p>
-				<a
-					href="/dextera-bracelet/"
-					class="py-3 lg:py-4 2xl:py-6 px-6 lg:px-10 2xl:px-14 bg-white text-black text-xl lg:text-2xl 2xl:text-3xl max-md:mb-16 max-sm:mb-10 hover:bg-blue-400 motion-safe:transition-all"
-					>Shop Now</a
-				>
-			</div>
-			<a class="forward" href="/"
-				><Image
-					src={arrow_forward}
-					alt="An image of an arrow, if you click it will cycle the products forwards."
-				/></a
-			>
-		</div>
-		<div
-			class="bg-blue-950 py-14 lg:py-18 2xl:py-24 justify-items-center transition-all"
-		>
-			<button class="back"
-				><Image
-					src={arrow_backwards}
-					alt="An image of an arrow, if you click it will cycle the products backwards"
-				/></button
-			>
-			<Image
-				src={bracelet_hero}
-				alt=""
-				class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
-			/>
-			<div
-				class="flex flex-col items-start md:px-[2rem] lg:px-[3rem] 2xl:px-[5rem] max-md:text-center max-md:items-center justify-center fade-up"
-			>
-				<h1
-					class="max-sm:text-4xl text-5xl lg:text-6xl 2xl:text-7xl max-sm:mb-4 max-md:mb-6 mb-4 lg:mb-6 2xl:mb-8 text-white"
-				>
-					Dextera Bracelet
-				</h1>
-				<p
-					class="max-sm:text-base text-lg lg:text-xl 2xl:text-2xl max-sm:mb-10 mb-16 lg:mb-[6rem] 2xl:mb-[10rem] text-slate-200"
-				>
-					Intricate details meet bold construction in this modern bracelet from
-					the Dextera family. Enhanced with our celebrated pavé technique, it a
-					gold-tone plated setting.
-				</p>
-				<a
-					href="/dextera-bracelet/"
-					class="py-3 lg:py-4 2xl:py-6 px-6 lg:px-10 2xl:px-14 bg-white text-black text-xl lg:text-2xl 2xl:text-3xl max-md:mb-16 max-sm:mb-10 hover:bg-blue-400 motion-safe:transition-all"
-					>Shop Now</a
-				>
-			</div>
-			<button class="forward"
-				><Image
-					src={arrow_forward}
-					alt="An image of an arrow, if you click it will cycle the products forwards."
-				/></button
+			<a href="#product3"
+				><span class="sr-only">The third product, the cosmopolitan watch</span
+				></a
 			>
 		</div>
 	</section>
+
 	<section
 		class="flex max-lg:justify-center max-lg:flex-col-reverse lg:gap-20 xl:gap-28 2xl:gap-32"
 	>
@@ -286,7 +218,6 @@ import arrow_a from "../assets/arrow-a.png";
 		</div>
 	</section>
 </main>
-
 <style lang="scss">
 	a {
 		font-family: var(--nav-font);
@@ -317,31 +248,52 @@ import arrow_a from "../assets/arrow-a.png";
 	}
 
 	section:nth-of-type(2) {
-		display: grid;
-		grid-template-areas: "back img text forward";
-		grid-template-columns: 1fr 4fr 3fr 1fr;
+		position: relative;
+		.prod-container {
+			display: grid;
+			grid-template-areas: "back img text forward";
+			grid-template-columns: 1fr 4fr 3fr 1fr;
 
-		@media only screen and (max-width: 765px) {
-			grid-template-areas:
-				"back text forward"
-				"back img forward";
-			grid-template-columns: 1fr 5fr 1fr;
+			scroll-snap-align: start;
+			flex: 1 0 100%;
+
+			@apply py-14 lg:py-20 2xl:py-24 justify-items-center transition-all w-[100vw] items-center;
+
+			@media only screen and (max-width: 765px) {
+				grid-template-areas:
+					"back text forward"
+					"back img forward";
+				grid-template-columns: 1fr 5fr 1fr;
+			}
+
+			div {
+				grid-area: text;
+			}
+
+			.hero-img {
+				grid-area: img;
+			}
 		}
+		.slider-nav {
+			display: flex;
+			column-gap: 1rem;
+			position: absolute;
+			bottom: 4rem;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
+			a {
+				width: 1rem;
+				height: 1rem;
+				border-radius: 50%;
+				background-color: white;
+				opacity: 0.75;
+				transition: opacity ease 250ms;
 
-		.back {
-			grid-area: back;
-		}
-
-		div {
-			grid-area: text;
-		}
-
-		.hero-img {
-			grid-area: img;
-		}
-
-		.forward {
-			grid-area: forward;
+				&:hover {
+					opacity: 1;
+				}
+			}
 		}
 	}
 
@@ -429,6 +381,7 @@ import arrow_a from "../assets/arrow-a.png";
 		transform: translateX(0);
 	}
 </style>
+
 <script defer>
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {

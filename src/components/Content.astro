@@ -33,7 +33,9 @@ import arrow_a from "../assets/arrow-a.png";
 		>
 	</section>
 	<section class="relative">
-		<div class="flex overflow-hidden scroll-smooth snap-mandatory snap-x">
+		<div
+			class="flex overflow-y-hidden overflow-x-auto slider scroll-smooth snap-mandatory snap-x"
+		>
 			<div class="bg-blue-950 prod-container" id="product1">
 				<Image
 					src={bracelet_hero}
@@ -252,7 +254,7 @@ import arrow_a from "../assets/arrow-a.png";
 			grid-template-areas: "back img text forward";
 			grid-template-columns: 1fr 4fr 3fr 1fr;
 
-			scroll-snap-align: start;
+			scroll-snap-align: center;
 			flex: 1 0 100%;
 
 			@apply py-14 lg:py-20 2xl:py-24 justify-items-center transition-all w-[100vw] items-center;
@@ -270,6 +272,11 @@ import arrow_a from "../assets/arrow-a.png";
 
 			.hero-img {
 				grid-area: img;
+			}
+		}
+		.slider {
+			&::-webkit-scrollbar {
+				display: none;
 			}
 		}
 		.slider-nav {

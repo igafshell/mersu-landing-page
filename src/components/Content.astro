@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import bracelet_hero from "../assets/dream-bracelet.png";
 import necklace_hero from "../assets/emerald-necklace.png";
 import watch_hero from "../assets/diamond-watch.png";
@@ -37,8 +36,10 @@ import arrow_a from "../assets/arrow-a.png";
 			class="flex overflow-y-hidden overflow-x-auto slider scroll-smooth snap-mandatory snap-x"
 		>
 			<div class="bg-blue-950 prod-container" id="product1">
-				<Image
-					src={bracelet_hero}
+				<img
+					src={bracelet_hero.src}
+					width={bracelet_hero.width}
+					height={bracelet_hero.height}
 					alt=""
 					class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
 				/>
@@ -65,8 +66,10 @@ import arrow_a from "../assets/arrow-a.png";
 				</div>
 			</div>
 			<div class="bg-slate-800 prod-container" id="product2">
-				<Image
-					src={necklace_hero}
+				<img
+					src={necklace_hero.src}
+					width={necklace_hero.width}
+					height={necklace_hero.height}
 					alt="A beautiful image of the millenia necklace"
 					class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
 				/>
@@ -93,8 +96,10 @@ import arrow_a from "../assets/arrow-a.png";
 				</div>
 			</div>
 			<div class="bg-[#001F3D] prod-container" id="product3">
-				<Image
-					src={watch_hero}
+				<img
+					src={watch_hero.src}
+					width={watch_hero.width}
+					height={watch_hero.height}
 					alt="A beutiful image of the cosmopolitan watch"
 					class="hero-img max-sm:w-[15rem] max-md:w-[20rem] w-[15rem] lg:w-[25rem] 2xl:w-[35rem] hover:brightness-75 hover:scale-110 motion-safe:transition-all fade-up"
 				/>
@@ -139,8 +144,10 @@ import arrow_a from "../assets/arrow-a.png";
 	<section
 		class="flex max-lg:justify-center max-lg:flex-col-reverse lg:gap-20 xl:gap-28 2xl:gap-32"
 	>
-		<Image
-			src={diamond_hero}
+		<img
+			src={diamond_hero.src}
+			width={diamond_hero.width}
+			height={diamond_hero.height}
 			alt="an image of a diamond"
 			class="diamond w-[45%]"
 		/>
@@ -156,8 +163,10 @@ import arrow_a from "../assets/arrow-a.png";
 				ans sources.
 			</p>
 			<a href="/" class="text-lg lg:text-xl 2xl:text-2xl inline-block"
-				>Follow Your Diamond's Journey <Image
-					src={arrow_a}
+				>Follow Your Diamond's Journey <img
+					src={arrow_a.src}
+					width={arrow_a.width}
+					height={arrow_a.height}
 					class="inline"
 					alt=""
 				/></a
@@ -179,8 +188,10 @@ import arrow_a from "../assets/arrow-a.png";
 				You'll know who it's for. You'll know when it's time. You'll just know.
 			</p>
 			<a href="/" class="max-sm:text-lg text-xl 2xl:text-2xl inline-block"
-				>Explore Love & Engagement<Image
-					src={arrow_a}
+				>Explore Love & Engagement<img
+					src={arrow_a.src}
+					width={arrow_a.width}
+					height={arrow_a.height}
 					alt=""
 					class="inline"
 				/></a
@@ -191,29 +202,83 @@ import arrow_a from "../assets/arrow-a.png";
 		class="text-center grid max-sm:grid-cols-1 justify-items-center grid-cols-2 xl:grid-cols-4 max-sm:gap-y-14 gap-y-16 gap-x-6 md:gap-x-8 lg:gap-x-10 2xl:gap-x-14 bg-[#001F3D] max-sm:py-8 py-10 lg:py-14 2xl:py-20 max-sm:px-6 px-8 lg:px-10 2xl:px-14"
 	>
 		<div class="fade-up">
-			<Image src={shipping_icon} alt="" class="logo" />
+			<img
+				src={shipping_icon.src}
+				width={shipping_icon.width}
+				height={shipping_icon.height}
+				alt=""
+				class="logo"
+			/>
 			<h3>Complimentary Shipping & Returns</h3>
 			<p>We offer complimentary shipping and returns on all Mersu orders.</p>
-			<a href="/">Learn More <Image src={arrow_a} alt="" class="inline" /></a>
+			<a href="/"
+				>Learn More <img
+					src={arrow_a.src}
+					width={arrow_a.width}
+					height={arrow_a.height}
+					alt=""
+					class="inline"
+				/></a
+			>
 		</div>
 		<div class="delay-200 fade-up">
-			<Image src={service_icon} alt="" class="logo" />
+			<img
+				src={service_icon.src}
+				width={service_icon.width}
+				height={service_icon.height}
+				alt=""
+				class="logo"
+			/>
 			<h3>Mersu at your service</h3>
 			<p>Our Client Advisors are always here to help.</p>
-			<a href="/">Contact Us<Image src={arrow_a} alt="" class="inline" /></a>
+			<a href="/"
+				>Contact Us<img
+					src={arrow_a.src}
+					width={arrow_a.width}
+					height={arrow_a.height}
+					alt=""
+					class="inline"
+				/></a
+			>
 		</div>
 		<div class="delay-500 fade-up">
-			<Image src={appointment_icon} alt="" class="logo" />
+			<img
+				src={appointment_icon.src}
+				width={appointment_icon.width}
+				height={appointment_icon.height}
+				alt=""
+				class="logo"
+			/>
 			<h3>Book an Appointment</h3>
 			<p>We're happy to help with in-store or virtual appointments.</p>
-			<a href="/">Book Now<Image src={arrow_a} alt="" class="inline" /></a>
+			<a href="/"
+				>Book Now<img
+					src={arrow_a.src}
+					width={arrow_a.width}
+					height={arrow_a.height}
+					alt=""
+					class="inline"
+				/></a
+			>
 		</div>
 		<div class="delay-700 fade-up">
-			<Image src={box_icon} alt="" class="logo" />
+			<img
+				src={box_icon.src}
+				width={box_icon.width}
+				height={box_icon.height}
+				alt=""
+				class="logo"
+			/>
 			<h3>The Iconic Blue Box</h3>
 			<p>Your Mersu purchase comes wrapped in our Blue Box packaging.</p>
 			<a href="/"
-				>Explore All Gifts<Image src={arrow_a} alt="" class="inline" /></a
+				>Explore All Gifts<img
+					src={arrow_a.src}
+					width={arrow_a.width}
+					height={arrow_a.height}
+					alt=""
+					class="inline"
+				/></a
 			>
 		</div>
 	</section>
@@ -225,15 +290,15 @@ import arrow_a from "../assets/arrow-a.png";
 		text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 	}
 	section:nth-of-type(1) {
-		background-image: url("../assets/ring-img-desktop.png"),
-			url("../assets/bg1.png");
+		background-image: url("../assets/ring-img-desktop.webp"),
+			url("../assets/bg1.webp");
 		background-size: auto 100%, auto 100%;
 		background-position: top right, left top;
 		background-repeat: no-repeat;
 
 		@media only screen and (max-width: 765px) {
-			background-image: url("../assets/ring-img-mobile.png"),
-				url("../assets/bg1.png");
+			background-image: url("../assets/ring-img-mobile.webp"),
+				url("../assets/bg1.webp");
 			background-position: bottom center, top left;
 			background-size: 100% auto, auto 100%;
 		}
@@ -303,20 +368,20 @@ import arrow_a from "../assets/arrow-a.png";
 	}
 
 	section:nth-of-type(3) {
-		background-image: url("../assets/bg2.png");
+		background-image: url("../assets/bg2.webp");
 		background-size: cover;
 		background-repeat: no-repeat;
 
 		@media only screen and (max-width: 1023px) {
 			.diamond {
-				content: url("../assets/diamond-lg.png");
+				content: url("../assets/diamond-lg.webp");
 				@apply w-full;
 			}
 		}
 
 		@media only screen and (max-width: 600px) {
 			.diamond {
-				content: url("../assets/diamond-mobile.png");
+				content: url("../assets/diamond-mobile.webp");
 			}
 		}
 		a {
@@ -328,12 +393,12 @@ import arrow_a from "../assets/arrow-a.png";
 	}
 
 	section:nth-of-type(4) {
-		background-image: url("../assets/bg3.png");
+		background-image: url("../assets/bg3.webp");
 		background-position: top center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		@media only screen and (max-width: 765px) {
-			background-image: url("../assets/bg3-mobile.png");
+			background-image: url("../assets/bg3-mobile.webp");
 		}
 		a {
 			font-family: var(--p-font);
